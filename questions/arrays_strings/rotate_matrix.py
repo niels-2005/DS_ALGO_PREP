@@ -1,6 +1,5 @@
 import unittest
-from copy import deepcopy 
-
+from copy import deepcopy
 
 # Question:
 # Rotate Matrix: Given an image represented by an NxN matrix, where each pixel in the image is 4
@@ -8,7 +7,7 @@ from copy import deepcopy
 
 
 def rotate_matrix(matrix):
-    return True 
+    return True
 
 
 class Test(unittest.TestCase):
@@ -34,9 +33,9 @@ class Test(unittest.TestCase):
     ]
 
     def test_rotate_matrix(self):
-            for test_matrix, expected in self.test_cases:
-                test_matrix = deepcopy(test_matrix)
-                assert rotate_matrix(test_matrix) == expected
+        for test_matrix, expected in self.test_cases:
+            test_matrix = deepcopy(test_matrix)
+            assert rotate_matrix(test_matrix) == expected
 
 
 if __name__ == "__main__":

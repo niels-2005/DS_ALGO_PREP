@@ -1,4 +1,4 @@
-import unittest 
+import unittest
 from copy import deepcopy
 
 # Question:
@@ -7,7 +7,7 @@ from copy import deepcopy
 
 
 def zero_matrix(matrix):
-    return True 
+    return True
 
 
 class Test(unittest.TestCase):

@@ -1,17 +1,24 @@
-import unittest
 import time
+import unittest
 
 # Question:
 # Is Unique: Implement an algorithm to determine if a string has all unique characters.
+# What if you cannot use additional data structures?
 
 
 def is_unique_string(string: str) -> bool:
-     # CODE HERE
-     return True
-     
+    # CODE HERE, allowed Data Structures
+    return True
+
+
+def is_unique_string_bit_vector(string: str) -> bool:
+    # CODE HERE, no additional data structures allowed
+    return True
 
 
 class Test(unittest.TestCase):
+    test_functions = [is_unique_string, is_unique_string_bit_vector]
+
     test_cases = [
         ("abcd", True),
         ("s4fad", True),
@@ -23,8 +30,9 @@ class Test(unittest.TestCase):
     ]
 
     def test_string_is_unique(self):
+        for test_function in self.test_functions:
             for string, expected in self.test_cases:
-                assert is_unique_string(string) == expected
+                assert test_function(string) == expected
 
 
 if __name__ == "__main__":

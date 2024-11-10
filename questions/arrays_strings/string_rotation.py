@@ -1,6 +1,5 @@
 import unittest
 
-
 # Question:
 # String Rotation:Assumeyou have a method isSubstringwhich checks if one word is a substring
 # of another. Given two strings, sl and s2, write code to check if s2 is a rotation of sl using only one
@@ -9,7 +8,6 @@ import unittest
 
 def string_rotation(s1: str, s2: str):
     return True
-
 
 
 class Test(unittest.TestCase):
