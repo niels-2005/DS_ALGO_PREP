@@ -9,6 +9,9 @@ from linked_list import LinkedList
 def kth_to_last(ll: LinkedList, k: int):
     return True
 
+def kth_last_recursive(ll: LinkedList, k: int):
+    return True
+
 
 class Test(unittest.TestCase):
     test_cases = [
