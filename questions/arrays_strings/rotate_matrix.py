@@ -10,8 +10,16 @@ def rotate_matrix(matrix):
     return True
 
 
+def rotate_matrix_pythonic(matrix):
+    return True
+
+
 class Test(unittest.TestCase):
 
+    test_functions = [
+        rotate_matrix, rotate_matrix_pythonic
+    ]
+    
     test_cases = [
         ([[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[7, 4, 1], [8, 5, 2], [9, 6, 3]]),
         (
@@ -33,9 +41,10 @@ class Test(unittest.TestCase):
     ]
 
     def test_rotate_matrix(self):
-        for test_matrix, expected in self.test_cases:
-            test_matrix = deepcopy(test_matrix)
-            assert rotate_matrix(test_matrix) == expected
+        for test_function in self.test_functions:
+            for test_matrix, expected in self.test_cases:
+                test_matrix = deepcopy(test_matrix)
+                assert rotate_matrix(test_matrix) == expected
 
 
 if __name__ == "__main__":
