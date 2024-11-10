@@ -20,10 +20,10 @@ class Test(unittest.TestCase):
     test_functions = [ulify_algorithm, ulify_algorithm_pythonic]
 
     test_cases = {
-        ("much ado about nothing      ", 22): "much%20ado%20about%20nothing",
-        ("Mr John Smith       ", 13): "Mr%20John%20Smith",
-        (" a b    ", 4): "%20a%20b",
-        (" a b       ", 5): "%20a%20b%20",
+        ("much ado about nothing      ", 22, "much%20ado%20about%20nothing"),
+        ("Mr John Smith       ", 13, "Mr%20John%20Smith"),
+        (" a b    ", 4, "%20a%20b"),
+        (" a b       ", 5,"%20a%20b%20"),
     }
 
     def test_urlify(self):
