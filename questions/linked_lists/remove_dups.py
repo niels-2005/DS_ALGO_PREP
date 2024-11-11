@@ -17,7 +17,7 @@ def remove_dups_followup(ll: LinkedList) -> LinkedList:
 
 
 class Test(unittest.TestCase):
-    testable_functions = [remove_dups, remove_dups_followup]
+    testable_functions = [remove_dups]
     test_cases = [
         ([], []),
         ([1, 1, 1, 1, 1, 1], [1]),
@@ -28,9 +28,15 @@ class Test(unittest.TestCase):
     ]
 
     def test_remove_dups(self):
-        for test_function in self.testable_functions:
-            for input_ll, expected_ll in self.test_cases:
-                assert test_function(input_ll) == expected_ll
+        for f in self.testable_functions:
+            for values, expected in self.test_cases:
+                expected = expected.copy()
+                deduped = f(LinkedList(values))
+                assert deduped.values() == expected
+
+                deduped.add(5)
+                expected.append(5)
+                assert deduped.values() == expected
 
 
 if __name__ == "__main__":

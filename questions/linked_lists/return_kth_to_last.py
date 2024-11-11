@@ -10,6 +10,10 @@ def kth_to_last(ll: LinkedList, k: int):
     return True
 
 
+def kth_last_recursive(ll: LinkedList, k: int):
+    return True
+
+
 class Test(unittest.TestCase):
     test_cases = [
         ((10, 20, 30, 40, 50), 1, 50),
