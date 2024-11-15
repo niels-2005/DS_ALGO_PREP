@@ -21,8 +21,9 @@ class Test(unittest.TestCase):
     ]
 
     def test_kth_to_last(self):
-        for input_ll, k, expected in self.test_cases:
-            assert kth_to_last(input_ll, k) == expected
+        for linked_list_values, k, expected in self.test_cases:
+            ll = LinkedList(linked_list_values)
+            assert kth_to_last(ll, k).value == expected
 
 
 if __name__ == "__main__":
